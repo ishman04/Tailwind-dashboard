@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    
+     <div class="flex min-h-[100vh] flex-no-wrap">
+        <!-- md:block for displays of min width 768px apply display block otherwise hidden as we have written(because sidebar should be hidden in mobile) => mobile first ui(default css written for mobile)-->
+         <!-- Side bar -->
+        <div class="w-64 bg-gray-800 hidden md:block">
+            <div class="flex justify-center items-center h-20 bg-gray-900">
+                <h1 class="text-white text-2xl">Dashboard</h1>
+            </div>
+            <nav class="mt-100">
+                <a href="#" class="flex items-center py-2 px-6 bg-gray-700 text-gray-100 mt-4 hover:text-gray-400">
+                    <span class="mx=3">Home</span>
+                </a>
+                <a href="#" class="flex items-center py-2 px-6 bg-gray-700 text-gray-100 mt-4 hover:text-gray-400">
+                    <span class="mx=3">Analytics</span>
+                </a>
+                <a href="#" class="flex items-center py-2 px-6 bg-gray-700 text-gray-100 mt-4 hover:text-gray-400">
+                    <span class="mx=3">Sales</span>
+                </a>
+                <a href="#" class="flex items-center py-2 px-6 bg-gray-700 text-gray-100 mt-4 hover:text-gray-400">
+                    <span class="mx=3 ">Messages</span>
+                </a>
+            </nav>
+        </div>
+        <div class="flex flex-col w-full">
+            <header class="flex items-center bg-white px-4 h-16">
+                <button class="px-4 py-2 border rounded-md border-gray-300 hover:text-gray-600 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </button>
+                <div class="ml-auto flex items-center">
+                    <button class="flex items-center px-4 py-2 border rounded-md text-gray-600 border-gray-300">
+                        <span class="mr-2">Sign out</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- content -->
+            <main class="p-4 md:p-6">
+                <div class="flex justify-center gap-5">
+                    <!-- card 1 -->
+                    <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg min-w-[30%] hover:shadow-none transition-shadow duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold mb-4">Revenue</h3>
+                        <p class="text-gray-600 text-3xl">$12,000</p>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg min-w-[30%] hover:shadow-none transition-shadow duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold mb-4">Users</h3>
+                        <p class="text-gray-600 text-3xl">5000</p>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg min-w-[30%] hover:shadow-none transition-shadow duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold mb-4 ">Sales</h3>
+                        <p class="text-gray-600 text-3xl">4500</p>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-semibold text-gray-700">Recent activities</h2>
+                        <button class="py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View all</button>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg mt-4 overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="text-left border-b">
+                                    <th class="py-2">Date</th>
+                                    <th class="py-2">Activity</th>
+                                    <th class="py-2">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-2">01/01/2024</td>
+                                    <td class="py-2">Logged In</td>
+                                    <td class="py-2 text-green-600">Completed</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2">01/01/2024</td>
+                                    <td class="py-2">Logged In</td>
+                                    <td class="py-2 text-green-600">Completed</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2">01/01/2024</td>
+                                    <td class="py-2">Logged In</td>
+                                    <td class="py-2 text-yellow-500">Pending</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2">01/01/2024</td>
+                                    <td class="py-2">Logged In</td>
+                                    <td class="py-2 text-green-600">Completed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+     </div>
+</body>
+</html>
